@@ -3,7 +3,7 @@
 To setup run the following commands
 ```
 npm install
-node server.js
+npm run start
 ```
 
 Note this is intended for local development and demonstration purposes. Nginx recommended as a reverse proxy in Staging and Production.
