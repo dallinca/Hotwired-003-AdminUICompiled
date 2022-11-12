@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="preload" href="/images/Logo_Icon_Loader.gif" as="image" type="image/gif"><link rel="stylesheet" href="/css/normalize.css"><link rel="stylesheet" href="/css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&family=Open+Sans&family=Orbitron&family=Staatliches&display=swap" rel="stylesheet"><title>Hotwired Gaming</title><style id="styleLoader">.loading { top: 0; left: 0; height: 100%; width: 100%; z-index: 999999; } .loading__wrap { position: fixed; background-color: black; } .loading__image { position: relative; background: url('images/Logo_Icon_Loader.gif') no-repeat center center; } .fadeout.loading__wrap, .fadeout .loading__image { opacity: 0; }</style><link href="/css/adminUsers~siteUsers.7bb32ef7.css" rel="prefetch"><link href="/js/404.5ae9f82d.js" rel="prefetch"><link href="/js/about.fe5e2dbc.js" rel="prefetch"><link href="/js/adminUsers.0974383b.js" rel="prefetch"><link href="/js/adminUsers~siteUsers.bf4efb5e.js" rel="prefetch"><link href="/js/contact.e00dae04.js" rel="prefetch"><link href="/js/forgotPassword.51dfd544.js" rel="prefetch"><link href="/js/login.f12f54a8.js" rel="prefetch"><link href="/js/profile.9e249742.js" rel="prefetch"><link href="/js/register.3e29065a.js" rel="prefetch"><link href="/js/resetPassword.f1956076.js" rel="prefetch"><link href="/js/siteUsers.c89356f1.js" rel="prefetch"><link href="/css/app.44f82341.css" rel="preload" as="style"><link href="/js/app.6c5bbb42.js" rel="preload" as="script"><link href="/js/chunk-vendors.e806891b.js" rel="preload" as="script"><link href="/css/app.44f82341.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but hotwired doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="page-loader" class="loading loading__wrap"><div class="loading loading__image"></div></div><div id="app"></div><script>(function fn() { // Avoid polluting global namespace
+        // Track time to load
+        let start = Date.now();
+      
+        window.addEventListener("load", function() {
+            let now = Date.now();
+          
+            // Add class to distinguish between touch/non-touch experiences.
+            if (!("ontouchstart" in document.documentElement)) {
+              document.documentElement.classList.add("no-touch");
+            }
+
+            // desired overall css fadeout timings
+            let msFadeDelay = 1000;
+            let msFadeDuration = 300;
+
+            // Calculate Delay to window load event
+            let msDiff = (now - start);
+            let msDelay = (msDiff < msFadeDelay) ? (msFadeDelay - msDiff) : 0;
+
+            // Setup Loader fadeout
+            document.getElementById('styleLoader').innerHTML += '.loading__wrap, .loading__image { transition: opacity .3s ease-in ' + (msDelay / 1000) + 's;}';
+            document.getElementById("page-loader").classList.add("fadeout");
+            setTimeout(() => document.getElementById("page-loader").classList.remove("loading"), msFadeDuration + msDelay);
+        });
+      })();
+
+      function __HW__() {}
+      __HW__.utils = {}
+      __HW__.utils.formatUrlParams = function(params) {return "?" + __HW__.utils.formatBodyParams(params)}
+      __HW__.utils.formatBodyParams = function(params) {return Object.keys(params).map(function(key){return key+"="+encodeURIComponent(params[key])}).join("&")}</script><script src="/js/chunk-vendors.e806891b.js"></script><script src="/js/app.6c5bbb42.js"></script></body></html>
