@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Catch all
 app.get('/*', (req, res) => {
-  res.status(404).send('404')
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 })
 
 // Listen
